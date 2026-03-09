@@ -1,14 +1,20 @@
 /* Universal Styles */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     font-family: "Fira Code", monospace;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: black;
     color: seashell;
     margin:0;
+    line-height: 1.5;
 }
 
 .main-content {
@@ -17,15 +23,9 @@ body {
     padding-bottom: 2rem;
 }
 
-* {
-    box-sizing: border-box;
-}
-
 footer {
     position: relative;
     width: 100%;
-    height: 2.5rem;
-    z-index: 100;
     border-top: solid 1px #B22222;
     font-size: 1rem;
     text-align: right;
@@ -43,14 +43,19 @@ header .content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 6rem;
+    min-height: 6rem;
+    padding: 0.75rem 1rem;
+    gap: 1rem;
+    
 }
 
 header .logo {
-    padding: 1rem;
     display: inline-flex;
     align-items: center;
+    gap: 0.5rem;
+    padding: 0;
     font-size: 1.375rem;
+    flex-shrink: 0;
 }
 
 header .logo img {
@@ -65,19 +70,23 @@ header .logo img {
 
 header nav ul {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    gap: 1rem;
 }
 
 nav li {
-    padding-left: 0.75rem;
-    padding-right: 1.375rem;
+    padding: 0;
 }
 
 nav a {
-    font-size: 1.375rem;
+    font-size: 1.125rem;
     color: seashell;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 nav a:hover {
@@ -90,9 +99,8 @@ nav a:hover {
 /* Section 1, 2 & 3 */
 
 .description {
-    margin: 0;
     width: 100%;
-    padding: 0 1rem 1rem 1rem;
+    padding: 0 1rem 1rem;
 }
 
 .description h1 {
@@ -104,20 +112,21 @@ nav a:hover {
 
 .description p {
     font-size: 1.125rem;
-    line-height: 1.5;
     margin: 0;
     padding-bottom: 1rem;
 }
 
 .table {
     width: 100%;
-    padding: 0 1rem 2rem 1rem;
+    padding: 0 1rem 2rem;
+    overflow-x: auto;
 }
 
 .html-css-table, .box_model, .positioning-display {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto; 
+    min-width: 700px;
 }
 
 .html-css-table thead, .box_model thead, .positioning-display thead {
@@ -127,8 +136,9 @@ nav a:hover {
 
 td, th {
     border: 1px solid seashell;
-    padding: 0.5rem;
+    padding: 0.65rem 0.75rem;
     text-align: left;
+    vertical-align: middle;
 }
 
 th img {
@@ -140,10 +150,11 @@ th img {
 
 code {
     background-color: #008B8B;
-    padding: 3px 6px;
+    padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-family: "Fira Code", monospace;
     font-size: 0.85rem;
+    word-break: break-word;
 }
 
 /* pre inside table: prevent huge padding/margins */
@@ -152,29 +163,106 @@ td pre {
   white-space: nowrap; /* keeps your basic structure on one line */
 }
 
-#blank {
+.blank {
     text-align: center;
 }
 
 /* Body cells */
 .html-css-table td, .box_model td, .positioning-display td {
-    padding: 0.65rem 0.75rem;
     border-bottom: 1px solid #e5e7eb;  /* soft divider */
+}
+
+.html-css-table tbody tr, .box_model tbody tr, .positioning-display tbody tr {
+    transition: background-color 0.2s ease;
 }
 
 /* Zebra striping */
 .html-css-table tbody tr:nth-child(even), .box_model tbody tr:nth-child(even), .positioning-display tbody tr:nth-child(even) {
-    background-color: #00008B;
+    background-color: #111827;
 }
 
 /* Hover effect */
 .html-css-table tbody tr:hover, .box_model tbody tr:hover, .positioning-display tbody tr:hover {
     background-color: #1f2937;
-    transition: background-color 0.2s ease;
 }
 
 /* Footer */
 footer .content {
-    padding-top: 1rem;
-    padding-right: 1rem;
+    padding: 1rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+
+    header .content {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        height: auto;
+    }
+
+    header nav {
+        width: 100%;
+    }
+
+    header nav ul {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .description h1 {
+        font-size: 1.75rem;
+    }
+
+    .description p {
+        font-size: 1rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .logo img {
+        height: 3.75rem;
+    }
+
+    .description {
+        padding: 0 0.75rem 1rem;
+    }
+
+    .table {
+        padding: 0 0.75rem 2rem;
+    }
+
+    .description h1 {
+        font-size: 1.5rem;
+    }
+
+    .description p {
+        font-size: 0.95rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    code {
+        font-size: 0.75rem;
+    }
+
+    footer {
+        text-align: center;
+    }
 }
