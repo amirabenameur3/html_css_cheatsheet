@@ -58,6 +58,12 @@ header .logo {
     flex-shrink: 0;
 }
 
+.logo-text {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.1rem;
+}
+
 header .logo img {
     height: 5rem;
     width: auto;
@@ -96,14 +102,18 @@ nav a:hover {
 
 /* Main Content */
 
-/* Section 1, 2 & 3 */
+/* Sections */
+
+.section1, .section2, .section3 {
+    width: 100%;
+}
 
 .description {
     width: 100%;
     padding: 0 1rem 1rem;
 }
 
-.description h1 {
+.description h1, .description h2 {
     font-size: 2rem;
     color:#B22222;
     margin: 0;
@@ -160,7 +170,7 @@ code {
 /* pre inside table: prevent huge padding/margins */
 td pre {
   margin: 0;
-  white-space: nowrap; /* keeps your basic structure on one line */
+  white-space: nowrap; /* keeps the basic structure on one line */
 }
 
 .blank {
@@ -214,7 +224,7 @@ footer .content {
         gap: 0.75rem;
     }
 
-    .description h1 {
+    .description h1, .description h2 {
         font-size: 1.75rem;
     }
 
@@ -245,7 +255,7 @@ footer .content {
         padding: 0 0.75rem 2rem;
     }
 
-    .description h1 {
+    .description h1, .description h2 {
         font-size: 1.5rem;
     }
 
