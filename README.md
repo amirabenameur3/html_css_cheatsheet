@@ -9,10 +9,12 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white" alt="HTML Badge">
-  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white" alt="CSS Badge">
-  <img src="https://img.shields.io/badge/Flexbox-Layout-blue" alt="Flexbox Badge">
-  <img src="https://img.shields.io/badge/Responsive-Design-38bdf8" alt="Responsive Badge">
+  <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/Flexbox-Layout-blue">
+  <img src="https://img.shields.io/badge/Responsive-Design-38bdf8">
+  <img src="https://img.shields.io/badge/GitHub-Project-181717?logo=github">
+  <img src="https://img.shields.io/badge/Status-Portfolio%20Project-purple">
 </p>
 
 <p align="center">
