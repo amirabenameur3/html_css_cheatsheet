@@ -16,6 +16,11 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/github/repo-size/amirabenameur3/html_css_cheatsheet">
+  <img src="https://img.shields.io/github/last-commit/amirabenameur3/html_css_cheatsheet">
+</p>
+
+<p align="center">
   <a href="https://amirabenameur3.github.io/html_css_cheatsheet/">
     <img src="https://img.shields.io/badge/Live-Demo-Online-green?style=for-the-badge&logo=github" alt="Live Demo Badge">
   </a>
