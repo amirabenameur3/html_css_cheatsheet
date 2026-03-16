@@ -22,12 +22,6 @@
 
 <p align="center">
   <a href="https://amirabenameur3.github.io/html_css_cheatsheet/">
-    <img src="https://img.shields.io/badge/Live-Demo-Online-green?style=for-the-badge&logo=github" alt="Live Demo Badge">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://amirabenameur3.github.io/html_css_cheatsheet/">
   <img src="https://img.shields.io/badge/🌐-Live%20Demo-38bdf8?style=for-the-badge">
   </a>
 </p>
