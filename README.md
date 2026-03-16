@@ -21,6 +21,12 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="https://amirabenameur3.github.io/html_css_cheatsheet/">
+  <img src="https://img.shields.io/badge/🌐-Live%20Demo-38bdf8?style=for-the-badge">
+  </a>
+</p>
+
 ---
 
 # 📖 Project Overview
