@@ -112,6 +112,8 @@ html_css_cheatsheet
     └── images
 ```
 
+---
+
 ## 🧠 What I Learned
 
 While building this project I practiced:
