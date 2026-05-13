@@ -1,18 +1,58 @@
 /* Universal Styles */
 
+/* Dark Theme Variables */
+
+:root {
+    --bg-primary: #000000;
+    --bg-secondary: #111827;
+    --bg-table-header: #1f2937;
+
+    --text-primary: #fff5ee;
+    --text-secondary: #e5e7eb;
+
+    --accent-primary: #B22222;
+    --accent-secondary: #008B8B;
+
+    --border-primary: #B22222;
+    --border-light: #e5e7eb;
+
+    --code-bg: #008B8B;
+
+    --font-main: "Fira Code", monospace;
+}
+
+/* Light Theme Variables */
+
+body.light-theme {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-table-header: #e5e7eb;
+
+    --text-primary: #111827;
+    --text-secondary: #374151;
+
+    --accent-primary: #B22222;
+    --accent-secondary: #008B8B;
+
+    --border-primary: #B22222;
+    --border-light: #d1d5db;
+
+    --code-bg: #dbeafe;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
-    font-family: "Fira Code", monospace;
+    font-family: var(--font-main);
     font-size: 16px;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: black;
-    color: seashell;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     margin:0;
     line-height: 1.5;
 }
@@ -26,7 +66,7 @@ body {
 footer {
     position: relative;
     width: 100%;
-    border-top: solid 1px #B22222;
+    border-top: solid 1px var(--border-primary);
     font-size: 1rem;
     text-align: right;
 }
@@ -36,7 +76,7 @@ footer {
 header {
   position: relative;
   width: 100%;
-  border-bottom: solid 1px #B22222;
+  border-bottom: solid 1px var(--border-primary);
 }
 
 header .content {
@@ -71,7 +111,7 @@ header .logo img {
 }
 
 .logo .sheet {
-    color: #B22222;
+    color: var(--accent-primary);
 }
 
 header nav ul {
@@ -90,13 +130,13 @@ nav li {
 
 nav a {
     font-size: 1.125rem;
-    color: seashell;
+    color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 nav a:hover {
-    color: #B22222;
+    color: var(--accent-primary);
     cursor: pointer;
 }
 
@@ -104,7 +144,7 @@ nav a:hover {
 
 /* Sections */
 
-.section1, .section2, .section3 {
+.section1, .section2, .section3, .section4, .section5, .section6, .section7, .section8 {
     width: 100%;
 }
 
@@ -115,7 +155,7 @@ nav a:hover {
 
 .description h1, .description h2 {
     font-size: 2rem;
-    color:#B22222;
+    color: var(--accent-primary);
     margin: 0;
     padding-bottom: 1rem;
 }
@@ -132,20 +172,20 @@ nav a:hover {
     overflow-x: auto;
 }
 
-.html-css-table, .box_model, .positioning-display {
+.html-css-table, .box_model, .flexbox-table, .grid-table, .responsive-table, .selectors-table, .accessibility-table, .positioning-display {
     width: 100%;
     border-collapse: collapse;
     table-layout: auto; 
     min-width: 700px;
 }
 
-.html-css-table thead, .box_model thead, .positioning-display thead {
-    background-color: #1f2937;   /* dark modern header */
-    color: seashell;
+.html-css-table thead, .box_model thead, .flexbox-table thead, .grid-table thead, .responsive-table thead, .selectors-table thead, .accessibility-table thead, .positioning-display thead {
+    background-color: var(--bg-table-header);   /* dark modern header */
+    color: var(--text-primary);
 }
 
 td, th {
-    border: 1px solid seashell;
+    border: 1px solid var(--border-light);
     padding: 0.65rem 0.75rem;
     text-align: left;
     vertical-align: middle;
@@ -159,10 +199,10 @@ th img {
 }
 
 code {
-    background-color: #008B8B;
+    background-color: var(--code-bg);
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
-    font-family: "Fira Code", monospace;
+    font-family: var(--font-main);
     font-size: 0.85rem;
     word-break: break-word;
 }
@@ -178,22 +218,22 @@ td pre {
 }
 
 /* Body cells */
-.html-css-table td, .box_model td, .positioning-display td {
-    border-bottom: 1px solid #e5e7eb;  /* soft divider */
+.html-css-table td, .box_model td, .flexbox-table td, .grid-table td, .responsive-table td, .selectors-table td, .accessibility-table td, .positioning-display td {
+    border-bottom: 1px solid var(--border-light);  /* soft divider */
 }
 
-.html-css-table tbody tr, .box_model tbody tr, .positioning-display tbody tr {
+.html-css-table tbody tr, .box_model tbody tr, .flexbox-table tbody tr, .grid-table tbody tr, .responsive-table tbody tr, .selectors-table tbody tr, .accessibility-table tbody tr, .positioning-display tbody tr {
     transition: background-color 0.2s ease;
 }
 
 /* Zebra striping */
-.html-css-table tbody tr:nth-child(even), .box_model tbody tr:nth-child(even), .positioning-display tbody tr:nth-child(even) {
-    background-color: #111827;
+.html-css-table tbody tr:nth-child(even), .box_model tbody tr:nth-child(even), .flexbox-table tbody tr:nth-child(even), .grid-table tbody tr:nth-child(even), .responsive-table tbody tr:nth-child(even), .selectors-table tbody tr:nth-child(even), .accessibility-table tbody tr:nth-child(even), .positioning-display tbody tr:nth-child(even) {
+    background-color: var(--bg-secondary);
 }
 
 /* Hover effect */
-.html-css-table tbody tr:hover, .box_model tbody tr:hover, .positioning-display tbody tr:hover {
-    background-color: #1f2937;
+.html-css-table tbody tr:hover, .box_model tbody tr:hover, .flexbox-table tbody tr:hover, .grid-table tbody tr:hover, .responsive-table tbody tr:hover, .selectors-table tbody tr:hover, .accessibility-table tbody tr:hover, .positioning-display tbody tr:hover {
+    background-color: var(--bg-table-header);
 }
 
 /* Footer */

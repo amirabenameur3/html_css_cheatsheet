@@ -24,6 +24,11 @@
                 <ul>
                     <li><a href="#html-css">HTML+CSS</a></li>
                     <li><a href="#box-model">Box Model</a></li>
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#css-grid">CSS Grid</a></li>
+                    <li><a href="#responsive-design">Responsive Design</a></li>
+                    <li><a href="#css-selectors">CSS Selectors</a></li>
+                    <li><a href="#accessibility">Accessibility</a></li>
                     <li><a href="#positioning-display">Positioning & Display</a></li>
                 </ul>
             </nav>
@@ -36,7 +41,8 @@
     <section class="section1" id="html-css">
         <div class="description">
             <h1>Cheatsheet HTML & CSS</h1>
-            <p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the fundamental technologies for building web pages. HTML provides the structure of the page, while CSS is used to control the presentation, formatting, and layout.</p>
+            <p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the fundamental technologies for building web pages. 
+               HTML provides the structure of the page, while CSS is used to control the presentation, formatting, and layout.</p>
             <p>Here are some key concepts and examples to help you get started with HTML and CSS:</p>
         </div>
         
@@ -200,8 +206,348 @@
         </div>     
     </section>
 
+    <!--Flexbox-->
+    <section class="section3" id="flexbox">
+        <div class="description">
+            <h2>Flexbox</h2>
+            <p>Flexbox is a one-dimensional CSS layout system used to arrange elements in rows or columns. 
+                It is especially useful for alignment, spacing, and creating responsive layouts.</p>
+            <p>Here are some of the most important Flexbox properties:</p>
+        </div>
+        
+        <div class="table">
+            <table class="flexbox-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Example</th>
+                        <th>What it Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>display</strong></td>
+                        <td><code>display: flex;</code></td>
+                        <td>Turns an element into a flex container</td>
+                    </tr>
+                    <tr>
+                        <td><strong>flex-direction</strong></td>
+                        <td><code>flex-direction: row;</code></td>
+                        <td>Defines the main direction of flex items</td>
+                    </tr>
+                    <tr>
+                        <td><strong>justify-content</strong></td>
+                        <td><code>justify-content: center;</code></td>
+                        <td>Aligns items along the main axis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>align-items</strong></td>
+                        <td><code>align-items: center;</code></td>
+                        <td>Aligns items along the cross axis</td>
+                    </tr>
+                    <tr>
+                        <td><strong>flex-wrap</strong></td>
+                        <td><code>flex-wrap: wrap;</code></td>
+                        <td>Allows items to move onto a new line</td>
+                    </tr>
+                    <tr>
+                        <td><strong>gap</strong></td>
+                        <td><code>gap: 1rem;</code></td>
+                        <td>Adds space between flex items</td>
+                    </tr>
+                    <tr>
+                        <td><strong>flex-grow</strong></td>
+                        <td><code>flex-grow: 1;</code></td>
+                        <td>Allows an item to grow and fill available space</td>
+                    </tr>
+                    <tr>
+                        <td><strong>align-self</strong></td>
+                        <td><code>align-self: flex-end;</code></td>
+                        <td>Changes the alignment of one specific flex item</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--CSS Grid-->
+    <section class="section4" id="css-grid">
+        <div class="description">
+            <h2>CSS Grid</h2>
+            <p>CSS Grid is a two-dimensional layout system used to create complex layouts with rows and columns. 
+               It provides powerful control over spacing, alignment, and responsive page structures.</p>
+            <p>Here are some essential CSS Grid properties:</p>
+        </div>
+        
+        <div class="table">
+            <table class="grid-table">
+                <thead>
+                    <tr>
+                        <th>Property</th>
+                        <th>Example</th>
+                        <th>What it Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>display</strong></td>
+                        <td><code>display: grid;</code></td>
+                        <td>Turns an element into a grid container</td>
+                    </tr>
+                    <tr>
+                        <td><strong>grid-template-columns</strong></td>
+                        <td><code>grid-template-columns: 1fr 1fr;</code></td>
+                        <td>Defines the number and size of columns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>grid-template-rows</strong></td>
+                        <td><code>grid-template-rows: auto auto;</code></td>
+                        <td>Defines the number and size of rows</td>
+                    </tr>
+                    <tr>
+                        <td><strong>gap</strong></td>
+                        <td><code>gap: 1rem;</code></td>
+                        <td>Adds spacing between grid items</td>
+                    </tr>
+                    <tr>
+                        <td><strong>repeat()</strong></td>
+                        <td><code>repeat(3, 1fr)</code></td>
+                        <td>Repeats column or row patterns</td>
+                    </tr>
+                    <tr>
+                        <td><strong>fr unit</strong></td>
+                        <td><code>1fr</code></td>
+                        <td>Represents a fraction of available space</td>
+                    </tr>
+                    <tr>
+                        <td><strong>place-items</strong></td>
+                        <td><code>place-items: center;</code></td>
+                        <td>Aligns items horizontally and vertically</td>
+                    </tr>
+                    <tr>
+                        <td><strong>grid-column</strong></td>
+                        <td><code>grid-column: 1 / 3;</code></td>
+                        <td>Controls how many columns an item spans</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--Responsive Design-->
+    <section class="section5" id="responsive-design">
+        <div class="description">
+            <h2>Responsive Design</h2>
+            <p>Responsive design allows websites to adapt to different screen sizes, such as desktops, tablets, and mobile phones. 
+               It helps create layouts that remain readable, usable, and visually balanced across devices.</p>
+            <p>Here are some important responsive design concepts:</p>
+        </div>
+        
+        <div class="table">
+            <table class="responsive-table">
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Example</th>
+                        <th>What it Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Viewport Meta Tag</strong></td>
+                        <td><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></td>
+                        <td>Makes the page scale correctly on mobile devices</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Media Query</strong></td>
+                        <td><code>@media (max-width: 768px)</code></td>
+                        <td>Applies CSS rules only at specific screen sizes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Flexible Width</strong></td>
+                        <td><code>width: 100%;</code></td>
+                        <td>Allows elements to resize with their container</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max Width</strong></td>
+                        <td><code>max-width: 1200px;</code></td>
+                        <td>Prevents content from becoming too wide on large screens</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Relative Units</strong></td>
+                        <td><code>rem</code>, <code>%</code>, <code>vw</code>, <code>vh</code></td>
+                        <td>Creates scalable spacing, sizing, and layouts</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile First</strong></td>
+                        <td><code>min-width</code></td>
+                        <td>Starts styling for small screens, then enhances for larger screens</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fluid Typography</strong></td>
+                        <td><code>clamp(1rem, 2vw, 2rem)</code></td>
+                        <td>Makes text scale smoothly between minimum and maximum sizes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Responsive Images</strong></td>
+                        <td><code>max-width: 100%;</code></td>
+                        <td>Prevents images from overflowing their container</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--CSS Selectors-->
+    <section class="section6" id="css-selectors">
+        <div class="description">
+            <h2>CSS Selectors</h2>
+            <p>CSS selectors are used to target and style HTML elements. They allow developers to apply styles based on element type, 
+               class, ID, state, structure, and more.</p>
+            <p>Here are some commonly used CSS selectors:</p>
+        </div>
+        
+        <div class="table">
+            <table class="selectors-table">
+                <thead>
+                    <tr>
+                        <th>Selector</th>
+                        <th>Example</th>
+                        <th>What it Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Element Selector</strong></td>
+                        <td><code>p</code></td>
+                        <td>Selects all paragraph elements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Class Selector</strong></td>
+                        <td><code>.card</code></td>
+                        <td>Selects elements with a specific class</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ID Selector</strong></td>
+                        <td><code>#header</code></td>
+                        <td>Selects an element with a specific ID</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Universal Selector</strong></td>
+                        <td><code>*</code></td>
+                        <td>Selects all elements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Descendant Selector</strong></td>
+                        <td><code>.card p</code></td>
+                        <td>Selects paragraphs inside elements with class "card"</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Child Selector</strong></td>
+                        <td><code>.menu > li</code></td>
+                        <td>Selects direct child elements only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pseudo-class</strong></td>
+                        <td><code>a:hover</code></td>
+                        <td>Selects elements in a specific state</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pseudo-element</strong></td>
+                        <td><code>p::before</code></td>
+                        <td>Selects and styles part of an element</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Attribute Selector</strong></td>
+                        <td><code>input[type="text"]</code></td>
+                        <td>Selects elements with a specific attribute</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Group Selector</strong></td>
+                        <td><code>h1, h2, h3</code></td>
+                        <td>Selects multiple elements at once</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!--Accessibility-->
+    <section class="section7" id="accessibility">
+        <div class="description">
+            <h2>Accessibility</h2>
+            <p>Web accessibility ensures that websites can be used by everyone, including people with disabilities. 
+               Accessible websites improve usability, readability, keyboard navigation, and screen reader support.</p>
+            <p>Here are some important accessibility concepts and practices:</p>
+        </div>
+        
+        <div class="table">
+            <table class="accessibility-table">
+                <thead>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Example</th>
+                        <th>What it Does</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Alt Text</strong></td>
+                        <td><code>alt="Profile picture"</code></td>
+                        <td>Describes images for screen readers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Semantic HTML</strong></td>
+                        <td><code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code></td>
+                        <td>Provides meaningful page structure</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ARIA Labels</strong></td>
+                        <td><code>aria-label="Close menu"</code></td>
+                        <td>Adds accessible labels for assistive technologies</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Form Labels</strong></td>
+                        <td><code>&lt;label for="email"&gt;</code></td>
+                        <td>Associates labels with form inputs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Keyboard Navigation</strong></td>
+                        <td><code>tabindex="0"</code></td>
+                        <td>Allows navigation using the keyboard</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus States</strong></td>
+                        <td><code>:focus</code>, <code>:focus-visible</code></td>
+                        <td>Helps users identify active interactive elements</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Color Contrast</strong></td>
+                        <td><code>color: #fff;</code></td>
+                        <td>Improves readability between text and background</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Button Accessibility</strong></td>
+                        <td><code>&lt;button&gt;</code></td>
+                        <td>Uses proper interactive elements instead of generic divs</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Accessible Links</strong></td>
+                        <td><code>&lt;a href=""&gt;</code></td>
+                        <td>Creates navigable and screen-reader-friendly links</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Screen Reader Support</strong></td>
+                        <td><code>aria-hidden="true"</code></td>
+                        <td>Controls what assistive technologies can read</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
     <!--Positioning & Display-->
-    <section class="section3" id="positioning-display">
+    <section class="section8" id="positioning-display">
         <div class="description">
             <h2>Positioning & Display</h2>
             <p>CSS positioning and display properties control how elements are laid out on a web page.</p>
