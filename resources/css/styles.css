@@ -39,12 +39,13 @@
 }
 
 body.light-theme {
-    --bg-primary: #f8fafc;
-    --bg-secondary: #ffffff;
-    --bg-table-header: #e5e7eb;
-    --bg-card: #ffffff;
+    --bg-primary: #f4efe8;
+    --bg-secondary: #eee7dd;
+    --bg-table-header: #ddd2c4;
+    --bg-table-hover: #e8dfd2;
+    --bg-card: #fffaf3;
 
-    --text-primary: #111827;
+    --text-primary: #1f2937;
     --text-secondary: #374151;
     --text-muted: #6b7280;
 
@@ -52,12 +53,24 @@ body.light-theme {
     --accent-secondary: #008B8B;
 
     --border-primary: #B22222;
-    --border-light: #d1d5db;
+    --border-light: #cdbdaa;
 
     --code-bg: #dbeafe;
 
     --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
     --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+body.light-theme .cheatsheet-section,
+body.light-theme .site-header {
+    box-shadow: 0 8px 24px rgba(31, 41, 55, 0.08);
+}
+
+body.light-theme input,
+body.light-theme .theme-toggle,
+body.light-theme .menu-button {
+    background-color: #fffaf3;
+    border-color: #d6c8b8;
 }
 
 * {
