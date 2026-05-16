@@ -616,6 +616,11 @@ footer .content {
         grid-template-columns: 1fr;
     }
 
+    .nav-menu.active {
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
     .description h1, .description h2 {
         font-size: 1.75rem;
     }
