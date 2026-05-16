@@ -204,7 +204,7 @@ function highlightText(element, searchValue) {
                 node.replaceWith(wrapper);
             }
         } else if (
-            node.nodeType === 1 && !node.classList.contains("highlight")) {
+            node.nodeType === 1 && !node.classList.contains("highlight") && node.tagName !== "CODE") {
             highlightText(node, searchValue);
         }
     });
