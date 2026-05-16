@@ -17,6 +17,10 @@ const body = document.body;
 
 const copyButtons = document.querySelectorAll(".copy-button");
 
+const searchInput = document.getElementById("searchInput");
+const noResults = document.getElementById("noResults");
+const sections = document.querySelectorAll("section");
+
 // =========================
 // MOBILE / DROPDOWN MENU
 // =========================
@@ -136,3 +140,72 @@ copyButtons.forEach((button) => {
         }
     });
 });
+
+// =========================
+// SEARCH FILTER
+// =========================
+if (searchInput) {
+    searchInput.addEventListener("input", () => {
+        const searchValue = searchInput.value.toLowerCase().trim();
+
+        let totalVisibleRows = 0;
+
+        sections.forEach((section) => {
+            const rows = section.querySelectorAll("tbody tr");
+            let sectionHasVisibleRows = false;
+
+            rows.forEach((row) => {
+                // Remove previous highlights
+                row.querySelectorAll(".highlight").forEach((highlight) => {
+                    const parent = highlight.parentNode;
+                    parent.replaceChild(document.createTextNode(highlight.textContent), highlight);
+                    parent.normalize();
+                });
+
+                const rowText = row.textContent.toLowerCase().trim();
+                const isVisible = rowText.includes(searchValue);
+
+                row.style.display = isVisible ? "" : "none";
+
+                if (isVisible) {
+                    sectionHasVisibleRows = true;
+                    totalVisibleRows++;
+
+                    // Highlight matching text
+                    if (searchValue !== "") {
+                        highlightText(row, searchValue);
+                    }
+                }
+            });
+
+            section.style.display = sectionHasVisibleRows || searchValue === "" ? "" : "none";
+        });
+
+        const isSearchEmpty = totalVisibleRows === 0 && searchValue !== "";
+        document.body.classList.toggle("search-empty", isSearchEmpty);
+    });
+}
+
+// =========================
+// HIGHLIGHT FUNCTION
+// =========================
+
+function highlightText(element, searchValue) {
+    const regex = new RegExp(`(${searchValue})`, "gi");
+
+    element.childNodes.forEach((node) => {
+        if (node.nodeType === 3) {
+            const text = node.textContent;
+
+            if (regex.test(text)) {
+                const highlightedHTML = text.replace(regex, `<span class="highlight">$1</span>`);
+                const wrapper = document.createElement("span");
+                wrapper.innerHTML = highlightedHTML;
+                node.replaceWith(wrapper);
+            }
+        } else if (
+            node.nodeType === 1 && !node.classList.contains("highlight")) {
+            highlightText(node, searchValue);
+        }
+    });
+}
