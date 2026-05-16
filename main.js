@@ -15,6 +15,8 @@ const navLinks = document.querySelectorAll(".nav-menu a");
 const themeToggleButton = document.querySelector(".theme-toggle");
 const body = document.body;
 
+const copyButtons = document.querySelectorAll(".copy-button");
+
 // =========================
 // MOBILE / DROPDOWN MENU
 // =========================
@@ -97,3 +99,40 @@ if (themeToggleButton) {
         localStorage.setItem("theme", isLightTheme ? "light" : "dark");
     });
 }
+
+// =========================
+// COPY TO CLIPBOARD
+// =========================
+
+copyButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+        const codeExample = button.closest(".code-example");
+        const codeBlock = codeExample.querySelectorAll("code");
+
+        if (!codeBlock.length) return;
+
+        const codeText = Array.from(codeBlock).map((code) => code.textContent.trim()).join(", ");
+
+        try {
+            await navigator.clipboard.writeText(codeText);
+
+            button.innerHTML = `<i data-lucide="check"></i>`;
+            button.classList.add("copied");
+            lucide.createIcons();
+
+            setTimeout(() => {
+                button.innerHTML = `<i data-lucide="copy"></i>`;
+                button.classList.remove("copied");
+                lucide.createIcons();
+            }, 1500);
+        } catch (err) {
+            button.innerHTML = `<i data-lucide="x"></i>`;
+            lucide.createIcons();
+
+             setTimeout(() => {
+                button.innerHTML = `<i data-lucide="copy"></i>`;
+                lucide.createIcons();
+            }, 1500);
+        }
+    });
+});

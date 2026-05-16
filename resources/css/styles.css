@@ -346,6 +346,67 @@ header .logo img {
     flex-shrink: 0;
 }
 
+/* Copy Button */
+
+.code-example {
+    position: relative;
+    display: inline-block;
+    padding-right: 4rem;
+}
+
+.copy-button {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) scale(0.9);
+    padding: 0.25rem 0.6rem;
+    font-size: 0.75rem;
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-sm);
+    background-color: var(--bg-table-header);
+    color: var(--text-secondary);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        opacity 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.copy-button svg {
+    width: 0.9rem;
+    height: 0.9rem;
+    display: block;
+}
+
+.code-example:hover .copy-button {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) scale(1);
+}
+
+.copy-button:hover {
+    background-color: var(--accent-secondary);
+    color: var(--text-primary);
+}
+
+.copy-button.copied {
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+    opacity: 1;
+}
+
+/* =========================
+   TOUCH DEVICES
+========================= */
+
+@media (hover: none) {
+    .copy-button {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
 /* Main Content */
 
 /* Sections */
@@ -570,3 +631,4 @@ footer .content {
         text-align: center;
     }
 }
+
