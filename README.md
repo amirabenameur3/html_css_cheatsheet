@@ -5,14 +5,17 @@
 <h1 align="center">📘 HTML & CSS Cheatsheet</h1>
 
 <p align="center">
-  A simple reference website that summarizes essential <b>HTML</b> and <b>CSS</b> concepts for beginners learning web development.
+   An interactive and responsive <b>HTML & CSS developer cheatsheet</b> designed to help beginners quickly reference essential front-end concepts through clean UI components, searchable content, accordion sections, and copy-ready code examples.
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/HTML5-Structure-E34F26?logo=html5&logoColor=white">
   <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-Interactive-F7DF1E?logo=javascript&logoColor=black">
   <img src="https://img.shields.io/badge/Flexbox-Layout-blue">
   <img src="https://img.shields.io/badge/Responsive-Design-38bdf8">
+  <img src="https://img.shields.io/badge/Accessibility-ARIA-green">
+  <img src="https://img.shields.io/badge/Theme-Dark%2FLight-black">
   <img src="https://img.shields.io/badge/GitHub-Project-181717?logo=github">
   <img src="https://img.shields.io/badge/Status-Portfolio%20Project-purple">
 </p>
@@ -32,29 +35,53 @@
 
 # 📖 Project Overview
 
-This project is a **visual cheatsheet website** designed to help beginners quickly understand core **HTML and CSS concepts**.
+This project is an **interactive developer cheatsheet website** designed to help beginners quickly understand essential **HTML**, **CSS**, and responsive design concepts.
 
-The page organizes key web development concepts into easy-to-read sections, making it useful as a **quick reference while coding**.
+The cheatsheet organizes front-end development topics into structured and easy-to-read sections while providing modern interactive features such as:
 
-The cheatsheet focuses on three main areas:
+- Real-time search filtering
+- Accordion-based content organization
+- Copy-ready code snippets
+- Responsive mobile navigation
+- Dark and light theme support
 
-- **HTML & CSS fundamentals**
-- **The CSS Box Model**
-- **Positioning and display properties**
+The goal of the project was to build a clean, responsive, and user-friendly developer reference page while practicing modern front-end development techniques using HTML, CSS, and JavaScript.
 
-The goal was to build a **clean, readable, and responsive reference page** while practicing modern front-end development techniques.
+---
+
+## 🌟 Highlights 
+- 🔍 Interactive search system 
+- 📂 Accordion-based documentation layout 
+- 📋 Copy-to-clipboard functionality 
+- 🌗 Dark / Light theme support 
+- 📱 Responsive mobile-first navigation 
+
+---
+
+## 🌐 Live Demo
+
+You can explore the live version of the website here:
+
+👉 https://amirabenameur3.github.io/html_css_cheatsheet/
+
+Deployed with **GitHub Pages**
 
 ---
 
 ## ✨ Features
 
-- Responsive layout
-- Flexbox navigation
-- Clean and readable data tables
-- Code formatting using **Fira Code**
-- Zebra-striped tables for readability
-- Hover effects for table rows
-- Mobile-friendly design
+- 🔍 Real-time search and filtering system
+- 📂 Accordion-based collapsible sections
+- 📋 One-click copy buttons for code snippets
+- 🌗 Dark / Light theme support
+- 📱 Fully responsive mobile design
+- 🍔 Interactive mobile dropdown navigation
+- 🎨 Modern UI using CSS variables
+- ♿ Accessibility-focused semantic structure
+- 🧭 Sticky navigation header
+- ✨ Smooth hover and transition effects
+- 🦓 Zebra-striped tables for readability
+- 💻 Developer-friendly code formatting with Fira Code
 
 ---
 
@@ -62,8 +89,10 @@ The goal was to build a **clean, readable, and responsive reference page** while
 
 - **HTML5**
 - **CSS3**
+- **JavaScript (ES6)**
 - **Flexbox**
 - **Media Queries**
+- **CSS Variables**
 - **Google Fonts**
 
 ---
@@ -78,7 +107,7 @@ The goal was to build a **clean, readable, and responsive reference page** while
 
 ## 📸 Website Sections
 
-The cheatsheet is organized into clear sections:
+The cheatsheet is organized into multiple developer-focused sections:
 
 ### HTML Basics
 Key HTML elements and structure examples.
@@ -86,11 +115,55 @@ Key HTML elements and structure examples.
 ### CSS Basics
 Common CSS properties and styling fundamentals.
 
-### The Box Model
+### Box Model
 Visual explanation of margin, border, padding, and content.
 
-### Display & Positioning
-Understanding `display`, `inline`, `block`, and positioning behavior.
+### Flexbox
+Modern layout techniques using Flexbox.
+
+### Responsive Design
+Media queries and mobile-friendly design concepts.
+
+### CSS Selectors
+Common selector patterns and targeting methods.
+
+### Accessibility
+Semantic HTML and accessibility best practices.
+
+### Positioning & Display
+Understanding layout positioning and display behavior.
+
+---
+
+## ⚡ Interactive Features
+
+### 🔍 Search System
+Instantly filter cheatsheet content in real time.
+
+### 📂 Accordion Sections
+Expand and collapse sections for better readability and navigation.
+
+### 📋 Copy Buttons
+Quickly copy code examples with one click.
+
+### 🌗 Theme Toggle
+Switch between dark and light modes.
+
+### 📱 Mobile Navigation
+Responsive dropdown navigation optimized for smaller screens.
+
+---
+
+## ♿ Accessibility
+
+This project includes accessibility-focused improvements such as:
+
+- Semantic HTML structure
+- ARIA labels for interactive components
+- Accessible mobile navigation
+- Improved readability and spacing
+- Responsive layouts for different screen sizes
+- Keyboard-friendly interactions
 
 ---
 
@@ -102,6 +175,7 @@ html_css_cheatsheet
 ├── index.html
 ├── README.md
 ├── html_css_cheatsheet.ico
+├── main.js
 │
 ├── docs
 │   ├── cheatsheet_html_css_preview.png
@@ -112,6 +186,7 @@ html_css_cheatsheet
     │   └── styles.css
     │
     └── images
+
 ```
 
 ---
@@ -120,23 +195,30 @@ html_css_cheatsheet
 
 While building this project I practiced:
 
-- Structuring semantic HTML
-- Styling tables and code snippets
-- Using **Flexbox** for layout
-- Implementing **responsive design**
-- Organizing files in a real project structure
-- Writing clean and maintainable CSS
+- Semantic and accessible HTML structure
+- Writing scalable and maintainable CSS
+- Responsive UI and mobile-first design
+- JavaScript DOM manipulation and interactivity
+- Dynamic search and filtering systems
+- Accordion component implementation
+- Copy-to-clipboard functionality
+- Responsive navigation systems
+- UI/UX improvements for usability and readability
+- Organizing files in a real-world project structure
 
 ---
 
 ## 🚀 Future Improvements
 
-Possible improvements for the project:
+Possible future improvements for the project:
 
-- Add **JavaScript interactive examples**
-- Expand the cheatsheet with more **advanced CSS topics**
-- Improve **accessibility**
-- Add a **search feature** for faster reference
+- Add syntax highlighting for code examples
+- Add category-based filtering
+- Add keyboard shortcuts for navigation
+- Convert the project into a multi-page documentation website
+- Add interactive mini playground examples
+- Store theme preference using localStorage
+- Add animations using the Intersection Observer API
 
 ---
 
@@ -147,8 +229,9 @@ Possible improvements for the project:
 PhD researcher in Structural & Transportation Engineering  
 Front-End Development learner
 
-GitHub  
-https://github.com/amirabenameur3
+### Connect With Me
+
+- GitHub: https://github.com/amirabenameur3
 
 ---
 
