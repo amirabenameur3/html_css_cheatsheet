@@ -618,7 +618,9 @@ footer .content {
 
     .nav-menu.active {
         max-height: 60vh;
-        overflow-y: auto;
+        overflow-y: scroll;
+        touch-action: pan-y;
+        overscroll-behavior: contain;
     }
 
     .description h1, .description h2 {
