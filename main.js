@@ -21,6 +21,8 @@ const searchInput = document.getElementById("searchInput");
 const noResults = document.getElementById("noResults");
 const sections = document.querySelectorAll("section");
 
+const accordionHeaders = document.querySelectorAll(".accordion-header");
+
 // =========================
 // MOBILE / DROPDOWN MENU
 // =========================
@@ -209,3 +211,24 @@ function highlightText(element, searchValue) {
         }
     });
 }
+
+// =========================
+// ACCORDION
+// =========================
+
+accordionHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+        const accordion = header.parentElement;
+        const isOpen = accordion.classList.contains("active");
+
+        accordionHeaders.forEach((item) => {
+            item.parentElement.classList.remove("active");
+            item.setAttribute("aria-expanded", "false");
+        });
+
+        if (!isOpen) {
+            accordion.classList.add("active");
+            header.setAttribute("aria-expanded", "true");
+        }
+    });
+});

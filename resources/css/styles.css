@@ -577,6 +577,82 @@ td pre {
     background-color: var(--bg-table-hover);
 }
 
+/* Accordion Sections */
+
+.accordion {
+    margin-top: var(--space-md);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-sm);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: none;
+    background-color: transparent;
+    color: var(--text-primary);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--bg-card);
+}
+
+.accordion-header::after {
+    content: "+";
+    font-size: 1.25rem;
+    color: var(--accent-secondary);
+    transition: transform 0.3s ease;
+}
+
+.accordion.active .accordion-header::after {
+    content: "−";
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+        max-height 0.35s ease,
+        padding 0.35s ease;
+    padding: 0 1.25rem;
+}
+
+.accordion.active .accordion-content {
+    max-height: 1000px;
+    padding: 1rem 1.25rem;
+}
+
+.accordion-content ul {
+    padding-left: 1.25rem;
+}
+
+.accordion-content li {
+    margin-bottom: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.accordion-content code {
+    background-color: var(--code-bg);
+    padding: 0.15rem 0.35rem;
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+}
+
 /* Footer */
 footer .content {
     padding: 1rem;
@@ -633,6 +709,33 @@ footer .content {
 
     nav a {
         font-size: 1rem;
+    }
+
+    .accordion {
+        margin-top: var(--space-sm);
+    }
+
+    .accordion-header {
+        padding: 0.875rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    .accordion-content {
+        padding: 0 1rem;
+    }
+
+    .accordion.active .accordion-content {
+        max-height: 1000px;
+        padding: 0.875rem 1rem;
+    }
+
+    .accordion-content ul {
+        padding-left: 1rem;
+    }
+
+    .accordion-content li {
+        font-size: 0.9rem;
+        line-height: 1.5;
     }
 }
 
